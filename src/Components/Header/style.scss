@@ -1,0 +1,152 @@
+.header{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(124, 120, 120);
+    display:flex;
+    justify-content:space-between;
+    padding:0 100px;
+    .menuIpadMobile{
+        display:none;
+    }
+    .headerLogo{
+        img{
+            width: 94px;
+        }
+        p{
+            font-size: 8px;
+            margin: 0;
+        }
+    }
+    .active{
+        color: #04b2f7;
+    }
+    .headerNavbar{
+        display: flex;
+        justify-content:justify-content;
+        align-items: center;
+        a{
+            margin: 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: #444444;
+            cursor: pointer;
+            padding:0 10px;
+            text-decoration: none;
+            &:hover{
+                color:#04b2f7;
+            }
+        }
+    }
+    .headerUser{
+        position: relative;
+        display: flex;
+        justify-content:right;
+        align-items: center;
+        .iconHeader{
+            padding-left: 10px;
+            font-size:20px;
+            cursor: pointer;
+        }
+        .iconHeader.admin:hover ~.notiAdmin,
+        .iconHeader.login:hover ~.notiLogIn,
+        .iconHeader.logOut:hover ~.notiLogOut{
+            display:block;
+        }
+        .notiAdmin{
+            position: absolute;
+            display: none;
+            top: 38px;
+            right:0;
+            padding:5px 10px;
+            background-color: #fff;
+            border-radius: 3px;
+            border: 1px solid #dddddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .notiLogOut{
+            position: absolute;
+            display: none;
+            top: 38px;
+            right:0;
+            padding:5px 10px;
+            background-color: #fff;
+            border-radius: 3px;
+            border: 1px solid #dddddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .notiLogIn{
+            position: absolute;
+            display: none;
+            top: 38px;
+            width:100px;
+            right:0;
+            padding:5px 10px;
+            background-color: #fff;
+            border-radius: 3px;
+            border: 1px solid #dddddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+.signOut{
+    cursor: pointer;
+    &:hover{
+        color:#04b2f7;
+    }
+}
+@media (min-width:768px) and (max-width: 1199.98px) {
+    .header{
+        padding:0 10px;
+        .headerNavbar{
+            display: none;
+        }
+        .menuIpadMobile{
+            display: flex;
+            align-items: center;
+            width:50px;
+            padding-left: 20px;
+        }
+    }
+    .menutab{
+        position:fixed;
+        display: flex;
+        flex-flow: column;
+        background-color: #fff;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 300px;
+        border: 1px solid #dddddd;
+        height: 100%;
+        a{
+            margin: 0;
+            padding: 20px;
+            color: #222222;
+            font-weight: bold;
+            &:hover{
+                background-color: #dddddd;
+            }
+        }
+        span{
+            margin: 0;
+            padding: 20px;
+            text-align: right;
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 767.98px) {
+    .header{
+        padding:0 10px;
+        .headerNavbar{
+            display: none;
+        }
+        .menuIpadMobile{
+            display: flex;
+            align-items: center;
+            width:50px;
+            padding-left: 20px;
+        }
+    }
+}
