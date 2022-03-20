@@ -163,7 +163,7 @@ const AdData = ({
                 pagination={{ defaultPageSize: 7 }}
             />
             <Modal
-                width={00}
+                width={1000}
                 title={(statusForm) ? `Edit ${name}` : `Add ${name}`}
                 visible={isModalVisible}
                 onCancel={handleCancel}

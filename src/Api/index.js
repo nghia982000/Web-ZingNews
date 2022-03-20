@@ -16,7 +16,7 @@ export const loadDetailBook = (id) => axio.get(`${URL}/Book/${id}`)
 
 
 export const login = (payload) => {
-  return request(`http://quanlycudan.modunsoft.com/api/Users/authenticate`, {
+  return request(`https://quanlycudan.azurewebsites.net/api/users/authenticate`, {
     method: "post",
     data: payload,
   })
